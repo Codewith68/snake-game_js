@@ -20,24 +20,16 @@ document.addEventListener('DOMContentLoaded', function () {
         return divElement;
     }
 
-
-
-
     function drawfoodandSnake(){
      gamearena.innerHTML = ''; // Clear the game arena
      // wipeout everything and redraw the position of food and snake
-
-
 
      snake.forEach(segment => {
          const snakeElement = Drawdiv(segment.x, segment.y, 'snake');
            gamearena.appendChild(snakeElement);
      });
-
-
-
-
-
+     // Draw the snake segments
+     
      const foodElement = Drawdiv(food.x, food.y, 'food');
      gamearena.appendChild(foodElement);
 
@@ -47,7 +39,6 @@ document.addEventListener('DOMContentLoaded', function () {
      if(!gamestarted){
           gamestarted =true;
           drawfoodandSnake();
-
           Gameloop(); // Start the game loop
      }
 
